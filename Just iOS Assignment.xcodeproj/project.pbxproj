@@ -14,6 +14,7 @@
 		231DC4642714D8C000AB773C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 231DC4632714D8C000AB773C /* Assets.xcassets */; };
 		231DC4672714D8C000AB773C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 231DC4652714D8C000AB773C /* LaunchScreen.storyboard */; };
 		231DC46F2714DBBE00AB773C /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 231DC46E2714DBBE00AB773C /* README.md */; };
+		231DC4762714DE3100AB773C /* restaurants.json in Resources */ = {isa = PBXBuildFile; fileRef = 231DC4752714DE3100AB773C /* restaurants.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		231DC4662714D8C000AB773C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		231DC4682714D8C000AB773C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		231DC46E2714DBBE00AB773C /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		231DC4752714DE3100AB773C /* restaurants.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = restaurants.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				231DC4632714D8C000AB773C /* Assets.xcassets */,
+				231DC4752714DE3100AB773C /* restaurants.json */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -169,6 +172,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				231DC4672714D8C000AB773C /* LaunchScreen.storyboard in Resources */,
+				231DC4762714DE3100AB773C /* restaurants.json in Resources */,
 				231DC4642714D8C000AB773C /* Assets.xcassets in Resources */,
 				231DC46F2714DBBE00AB773C /* README.md in Resources */,
 				231DC4622714D8BE00AB773C /* Main.storyboard in Resources */,
