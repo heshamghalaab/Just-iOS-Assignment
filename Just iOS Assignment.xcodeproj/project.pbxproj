@@ -15,6 +15,7 @@
 		231DC4672714D8C000AB773C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 231DC4652714D8C000AB773C /* LaunchScreen.storyboard */; };
 		231DC46F2714DBBE00AB773C /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 231DC46E2714DBBE00AB773C /* README.md */; };
 		231DC4762714DE3100AB773C /* restaurants.json in Resources */ = {isa = PBXBuildFile; fileRef = 231DC4752714DE3100AB773C /* restaurants.json */; };
+		231DC47A2714DFC300AB773C /* DataDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231DC4792714DFC300AB773C /* DataDecoder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		231DC4682714D8C000AB773C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		231DC46E2714DBBE00AB773C /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		231DC4752714DE3100AB773C /* restaurants.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = restaurants.json; sourceTree = "<group>"; };
+		231DC4792714DFC300AB773C /* DataDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataDecoder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 				231DC4702714DCE900AB773C /* Application Delegates */,
 				231DC4712714DCFA00AB773C /* Configurations */,
 				231DC4722714DD0F00AB773C /* Resources */,
+				231DC4772714DF9B00AB773C /* Utilities */,
 				231DC4732714DD2500AB773C /* StoryBoards */,
 				231DC4742714DD3500AB773C /* Screens */,
 			);
@@ -111,6 +114,22 @@
 				231DC45E2714D8BE00AB773C /* ViewController.swift */,
 			);
 			path = Screens;
+			sourceTree = "<group>";
+		};
+		231DC4772714DF9B00AB773C /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				231DC4782714DFA900AB773C /* DataDecoder */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		231DC4782714DFA900AB773C /* DataDecoder */ = {
+			isa = PBXGroup;
+			children = (
+				231DC4792714DFC300AB773C /* DataDecoder.swift */,
+			);
+			path = DataDecoder;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -186,6 +205,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				231DC47A2714DFC300AB773C /* DataDecoder.swift in Sources */,
 				231DC45F2714D8BE00AB773C /* ViewController.swift in Sources */,
 				231DC45B2714D8BE00AB773C /* AppDelegate.swift in Sources */,
 				231DC45D2714D8BE00AB773C /* SceneDelegate.swift in Sources */,
