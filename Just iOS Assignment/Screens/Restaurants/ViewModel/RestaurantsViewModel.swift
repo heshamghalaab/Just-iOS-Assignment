@@ -10,10 +10,12 @@ import Foundation
 protocol RestaurantsViewModelInputs {
     func loadRestaurants()
     func filterContentForSearchText(_ searchText: String)
+    func restaurantCellViewModel(atIndexPath indexPath: IndexPath) -> RestaurantCellViewModelProtocol
 }
 
 protocol RestaurantsViewModelOutputs {
-    var restaurants: [Restaurant] { get }
+    var numberOfRestaurants: Int { get }
+    var reloadRestaurantsData: ( () -> Void )? { get set }
 }
 
 protocol RestaurantsViewModelProtocol {
@@ -30,6 +32,7 @@ class RestaurantsViewModel: RestaurantsViewModelOutputs, RestaurantsViewModelInp
     }
     
     private let restaurantsProvider: RestaurantsProviding
+    private var restaurants: [Restaurant] = []
     
     init(restaurantsProvider: RestaurantsProviding = RestaurantsProvider()){
         self.restaurantsProvider = restaurantsProvider
@@ -37,12 +40,23 @@ class RestaurantsViewModel: RestaurantsViewModelOutputs, RestaurantsViewModelInp
     
     // inputs
     func loadRestaurants() {
+        DispatchQueue.global().async {
+            self.restaurants = self.restaurantsProvider.restaurants()
+            DispatchQueue.main.async {
+                self.reloadRestaurantsData?()
+            }
+        }
     }
     
     func filterContentForSearchText(_ searchText: String) {
     }
     
+    func restaurantCellViewModel(atIndexPath indexPath: IndexPath) -> RestaurantCellViewModelProtocol{
+        RestaurantCellViewModel(restaurant: restaurants[indexPath.row])
+    }
+    
     // Outputs
-    var restaurants: [Restaurant] = []
+    var numberOfRestaurants: Int { restaurants.count }
+    var reloadRestaurantsData: ( () -> Void )?
 }
 
