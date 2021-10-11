@@ -23,7 +23,7 @@ Xcode Version 13.0 (13A233)
 ## TODO List:
 - [x] Creating App structure.
 - [x] Reading From Json File.
-- [ ] Building UI.
+- [x] Building UI.
 - [ ] Applying Sorting.
 - [ ] Applying Filtering.
 - [ ] Writing unit tests.
