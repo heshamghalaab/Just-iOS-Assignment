@@ -16,6 +16,7 @@
 		231DC46F2714DBBE00AB773C /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 231DC46E2714DBBE00AB773C /* README.md */; };
 		231DC4762714DE3100AB773C /* restaurants.json in Resources */ = {isa = PBXBuildFile; fileRef = 231DC4752714DE3100AB773C /* restaurants.json */; };
 		231DC47A2714DFC300AB773C /* DataDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231DC4792714DFC300AB773C /* DataDecoder.swift */; };
+		231DC47D2714E01F00AB773C /* OSLog+Loggers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231DC47C2714E01F00AB773C /* OSLog+Loggers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		231DC46E2714DBBE00AB773C /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		231DC4752714DE3100AB773C /* restaurants.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = restaurants.json; sourceTree = "<group>"; };
 		231DC4792714DFC300AB773C /* DataDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataDecoder.swift; sourceTree = "<group>"; };
+		231DC47C2714E01F00AB773C /* OSLog+Loggers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OSLog+Loggers.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +121,7 @@
 		231DC4772714DF9B00AB773C /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				231DC47B2714E00C00AB773C /* Extensions */,
 				231DC4782714DFA900AB773C /* DataDecoder */,
 			);
 			path = Utilities;
@@ -130,6 +133,14 @@
 				231DC4792714DFC300AB773C /* DataDecoder.swift */,
 			);
 			path = DataDecoder;
+			sourceTree = "<group>";
+		};
+		231DC47B2714E00C00AB773C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				231DC47C2714E01F00AB773C /* OSLog+Loggers.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -206,6 +217,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				231DC47A2714DFC300AB773C /* DataDecoder.swift in Sources */,
+				231DC47D2714E01F00AB773C /* OSLog+Loggers.swift in Sources */,
 				231DC45F2714D8BE00AB773C /* ViewController.swift in Sources */,
 				231DC45B2714D8BE00AB773C /* AppDelegate.swift in Sources */,
 				231DC45D2714D8BE00AB773C /* SceneDelegate.swift in Sources */,
