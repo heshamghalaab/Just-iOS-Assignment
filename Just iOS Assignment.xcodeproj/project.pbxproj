@@ -17,6 +17,7 @@
 		231DC4762714DE3100AB773C /* restaurants.json in Resources */ = {isa = PBXBuildFile; fileRef = 231DC4752714DE3100AB773C /* restaurants.json */; };
 		231DC47A2714DFC300AB773C /* DataDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231DC4792714DFC300AB773C /* DataDecoder.swift */; };
 		231DC47D2714E01F00AB773C /* OSLog+Loggers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231DC47C2714E01F00AB773C /* OSLog+Loggers.swift */; };
+		231DC4802714E0A900AB773C /* RestaurantsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231DC47F2714E0A900AB773C /* RestaurantsProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		231DC4752714DE3100AB773C /* restaurants.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = restaurants.json; sourceTree = "<group>"; };
 		231DC4792714DFC300AB773C /* DataDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataDecoder.swift; sourceTree = "<group>"; };
 		231DC47C2714E01F00AB773C /* OSLog+Loggers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OSLog+Loggers.swift"; sourceTree = "<group>"; };
+		231DC47F2714E0A900AB773C /* RestaurantsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantsProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +72,7 @@
 				231DC4722714DD0F00AB773C /* Resources */,
 				231DC4772714DF9B00AB773C /* Utilities */,
 				231DC4732714DD2500AB773C /* StoryBoards */,
+				231DC47E2714E08900AB773C /* Providers */,
 				231DC4742714DD3500AB773C /* Screens */,
 			);
 			path = "Just iOS Assignment";
@@ -141,6 +144,14 @@
 				231DC47C2714E01F00AB773C /* OSLog+Loggers.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		231DC47E2714E08900AB773C /* Providers */ = {
+			isa = PBXGroup;
+			children = (
+				231DC47F2714E0A900AB773C /* RestaurantsProvider.swift */,
+			);
+			path = Providers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,6 +230,7 @@
 				231DC47A2714DFC300AB773C /* DataDecoder.swift in Sources */,
 				231DC47D2714E01F00AB773C /* OSLog+Loggers.swift in Sources */,
 				231DC45F2714D8BE00AB773C /* ViewController.swift in Sources */,
+				231DC4802714E0A900AB773C /* RestaurantsProvider.swift in Sources */,
 				231DC45B2714D8BE00AB773C /* AppDelegate.swift in Sources */,
 				231DC45D2714D8BE00AB773C /* SceneDelegate.swift in Sources */,
 			);
