@@ -11,6 +11,7 @@ protocol RestaurantsViewModelInputs {
     func loadRestaurants()
     func filterContentForSearchText(_ searchText: String)
     func restaurantCellViewModel(atIndexPath indexPath: IndexPath) -> RestaurantCellViewModelProtocol
+    func didSelect(sortingOption: SortingOption)
 }
 
 protocol RestaurantsViewModelOutputs {
@@ -33,6 +34,7 @@ class RestaurantsViewModel: RestaurantsViewModelOutputs, RestaurantsViewModelInp
     
     private let restaurantsProvider: RestaurantsProviding
     private var restaurants: [Restaurant] = []
+    private var sortingOption: SortingOption?
     
     init(restaurantsProvider: RestaurantsProviding = RestaurantsProvider()){
         self.restaurantsProvider = restaurantsProvider
@@ -53,6 +55,12 @@ class RestaurantsViewModel: RestaurantsViewModelOutputs, RestaurantsViewModelInp
     
     func restaurantCellViewModel(atIndexPath indexPath: IndexPath) -> RestaurantCellViewModelProtocol{
         RestaurantCellViewModel(restaurant: restaurants[indexPath.row])
+    }
+    
+    func didSelect(sortingOption: SortingOption){
+        self.sortingOption = sortingOption
+        print("Selected Option : \(sortingOption.title)")
+        // TODO: Apply Sorting.
     }
     
     // Outputs

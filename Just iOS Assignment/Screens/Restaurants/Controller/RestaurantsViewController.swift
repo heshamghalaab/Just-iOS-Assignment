@@ -41,4 +41,19 @@ class RestaurantsViewController: UIViewController {
             self.restaurantsTableView.reloadData()
         }
     }
+    
+    @IBAction func onTapSelectSortingOption(_ sender: UIBarButtonItem) {
+        let alert = UIAlertController(
+            title: "Sorting Options",
+            message: "Please select an Option",
+            preferredStyle: .actionSheet)
+        
+        SortingOption.allCases.forEach { option in
+            alert.addAction(UIAlertAction(title: option.title, style: .default, handler: { _ in
+                self.viewModel.inputs.didSelect(sortingOption: option)
+            }))
+        }
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+    }
 }
