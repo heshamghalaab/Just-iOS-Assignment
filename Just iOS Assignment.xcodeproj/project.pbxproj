@@ -59,15 +59,55 @@
 		231DC4592714D8BE00AB773C /* Just iOS Assignment */ = {
 			isa = PBXGroup;
 			children = (
-				231DC45A2714D8BE00AB773C /* AppDelegate.swift */,
-				231DC45C2714D8BE00AB773C /* SceneDelegate.swift */,
-				231DC45E2714D8BE00AB773C /* ViewController.swift */,
-				231DC4602714D8BE00AB773C /* Main.storyboard */,
-				231DC4632714D8C000AB773C /* Assets.xcassets */,
-				231DC4652714D8C000AB773C /* LaunchScreen.storyboard */,
-				231DC4682714D8C000AB773C /* Info.plist */,
+				231DC4702714DCE900AB773C /* Application Delegates */,
+				231DC4712714DCFA00AB773C /* Configurations */,
+				231DC4722714DD0F00AB773C /* Resources */,
+				231DC4732714DD2500AB773C /* StoryBoards */,
+				231DC4742714DD3500AB773C /* Screens */,
 			);
 			path = "Just iOS Assignment";
+			sourceTree = "<group>";
+		};
+		231DC4702714DCE900AB773C /* Application Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				231DC45A2714D8BE00AB773C /* AppDelegate.swift */,
+				231DC45C2714D8BE00AB773C /* SceneDelegate.swift */,
+			);
+			path = "Application Delegates";
+			sourceTree = "<group>";
+		};
+		231DC4712714DCFA00AB773C /* Configurations */ = {
+			isa = PBXGroup;
+			children = (
+				231DC4682714D8C000AB773C /* Info.plist */,
+			);
+			path = Configurations;
+			sourceTree = "<group>";
+		};
+		231DC4722714DD0F00AB773C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				231DC4632714D8C000AB773C /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		231DC4732714DD2500AB773C /* StoryBoards */ = {
+			isa = PBXGroup;
+			children = (
+				231DC4602714D8BE00AB773C /* Main.storyboard */,
+				231DC4652714D8C000AB773C /* LaunchScreen.storyboard */,
+			);
+			path = StoryBoards;
+			sourceTree = "<group>";
+		};
+		231DC4742714DD3500AB773C /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				231DC45E2714D8BE00AB773C /* ViewController.swift */,
+			);
+			path = Screens;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -295,7 +335,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 8V78H7WRYL;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Just iOS Assignment/Info.plist";
+				INFOPLIST_FILE = "Just iOS Assignment/Configurations/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -323,7 +363,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 8V78H7WRYL;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Just iOS Assignment/Info.plist";
+				INFOPLIST_FILE = "Just iOS Assignment/Configurations/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
