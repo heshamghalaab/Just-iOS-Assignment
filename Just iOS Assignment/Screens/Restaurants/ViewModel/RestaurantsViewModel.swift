@@ -34,7 +34,7 @@ class RestaurantsViewModel: RestaurantsViewModelOutputs, RestaurantsViewModelInp
     
     private let restaurantsProvider: RestaurantsProviding
     private var restaurants: [Restaurant] = []
-    private var sortingOption: SortingOption?
+    private var sortingOption: SortingOption = .newest
     
     init(restaurantsProvider: RestaurantsProviding = RestaurantsProvider()){
         self.restaurantsProvider = restaurantsProvider
@@ -42,27 +42,21 @@ class RestaurantsViewModel: RestaurantsViewModelOutputs, RestaurantsViewModelInp
     
     // inputs
     func loadRestaurants() {
-        DispatchQueue.global().async {
-            self.restaurants = self.restaurantsProvider.restaurants()
-            DispatchQueue.main.async {
-                self.reloadRestaurantsData?()
-            }
-        }
+        self.restaurants = self.restaurantsProvider.restaurants()
+        self.reloadRestaurantsData?()
     }
     
     func filterContentForSearchText(_ searchText: String) {
     }
     
     func restaurantCellViewModel(atIndexPath indexPath: IndexPath) -> RestaurantCellViewModelProtocol{
-        RestaurantCellViewModel(restaurant: restaurants[indexPath.row])
+        RestaurantCellViewModel(restaurant: restaurants[indexPath.row], sortingOption: self.sortingOption)
     }
     
     func didSelect(sortingOption: SortingOption){
         self.sortingOption = sortingOption
-        print("Selected Option : \(sortingOption.title)")
-        // TODO: Apply Sorting.
     }
-    
+      
     // Outputs
     var numberOfRestaurants: Int { restaurants.count }
     var reloadRestaurantsData: ( () -> Void )?

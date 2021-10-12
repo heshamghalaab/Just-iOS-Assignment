@@ -11,19 +11,18 @@ struct Restaurant: Codable, Equatable {
     let id: String
     let name: String
     let status: Status
-    let sortingValues: SortingValues
+    let sortingValues: [String: Double]
     
-    enum Status: String, Codable{
+    enum Status: String, Codable, CaseIterable{
         case open
         case orderAhead = "order ahead"
         case closed
         case unknown
         
-        public init(from decoder: Decoder) throws {
+        init(from decoder: Decoder) throws {
             self = try Status(rawValue: decoder.singleValueContainer().decode(RawValue.self)) ?? .unknown
         }
     }
-    
     struct SortingValues: Codable{
         let bestMatch: Double
         let newest: Double
@@ -39,13 +38,6 @@ struct Restaurant: Codable, Equatable {
         lhs.id == rhs.id &&
         lhs.name == rhs.name &&
         lhs.status == rhs.status &&
-        lhs.sortingValues.bestMatch == rhs.sortingValues.bestMatch &&
-        lhs.sortingValues.newest == rhs.sortingValues.newest &&
-        lhs.sortingValues.ratingAverage == rhs.sortingValues.ratingAverage &&
-        lhs.sortingValues.distance == rhs.sortingValues.distance &&
-        lhs.sortingValues.popularity == rhs.sortingValues.popularity &&
-        lhs.sortingValues.averageProductPrice == rhs.sortingValues.averageProductPrice &&
-        lhs.sortingValues.deliveryCosts == rhs.sortingValues.deliveryCosts &&
-        lhs.sortingValues.minCost == rhs.sortingValues.minCost
+        lhs.sortingValues == rhs.sortingValues
     }
 }

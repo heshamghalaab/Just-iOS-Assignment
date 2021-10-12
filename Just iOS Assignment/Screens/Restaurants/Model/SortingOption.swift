@@ -17,6 +17,7 @@ enum SortingOption: CaseIterable{
     case deliveryCost
     case minimumCost
     
+    /// Title to be showed in the pop to select an option.
     var title: String{
         switch self{
         case .bestMatch: return "Best Match"
@@ -27,6 +28,20 @@ enum SortingOption: CaseIterable{
         case .averageProductPrice: return "Average Produc Price"
         case .deliveryCost: return "Delivery Cost"
         case .minimumCost: return "Minimum Cost"
+        }
+    }
+    
+    /// The Dictionary key.
+    var key: String{
+        switch self{
+        case .bestMatch: return "bestMatch"
+        case .newest: return "newest"
+        case .ratingAverage: return "ratingAverage"
+        case .distance: return "distance"
+        case .popularity: return "popularity"
+        case .averageProductPrice: return "averageProductPrice"
+        case .deliveryCost: return "deliveryCosts"
+        case .minimumCost: return "deliveryCosts"
         }
     }
 }
