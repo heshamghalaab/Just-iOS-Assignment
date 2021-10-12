@@ -25,5 +25,5 @@ Xcode Version 13.0 (13A233)
 - [x] Reading From Json File.
 - [x] Building UI.
 - [x] Applying Sorting.
-- [ ] Applying Filtering.
+- [x] Applying Filtering.
 - [ ] Writing unit tests.
