@@ -16,7 +16,7 @@
     }, {
         "id": "2",
         "name": "Tandoori Express",
-        "status": "closed",
+        "status": "open",
         "sortingValues": {
             "bestMatch": 1.0,
             "newest": 266.0,

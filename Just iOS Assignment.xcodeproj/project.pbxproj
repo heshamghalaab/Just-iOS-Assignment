@@ -36,6 +36,7 @@
 		234BCB6F27157F41001EF936 /* BucketSortTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234BCB6E27157F41001EF936 /* BucketSortTests.swift */; };
 		234BCB722715855D001EF936 /* RestaurantsProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234BCB712715855D001EF936 /* RestaurantsProviderTests.swift */; };
 		234BCB74271585BF001EF936 /* testRestaurants.json in Resources */ = {isa = PBXBuildFile; fileRef = 234BCB73271585BF001EF936 /* testRestaurants.json */; };
+		234BCB7927158716001EF936 /* RestaurantsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234BCB7827158716001EF936 /* RestaurantsViewModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +82,7 @@
 		234BCB6E27157F41001EF936 /* BucketSortTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BucketSortTests.swift; sourceTree = "<group>"; };
 		234BCB712715855D001EF936 /* RestaurantsProviderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantsProviderTests.swift; sourceTree = "<group>"; };
 		234BCB73271585BF001EF936 /* testRestaurants.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = testRestaurants.json; sourceTree = "<group>"; };
+		234BCB7827158716001EF936 /* RestaurantsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantsViewModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -286,6 +288,7 @@
 				234BCB6A27157DD4001EF936 /* DataDecoder */,
 				234BCB6D27157F2C001EF936 /* BucketSort */,
 				234BCB7027158538001EF936 /* Providers */,
+				234BCB75271586EC001EF936 /* ViewModels */,
 			);
 			path = "Just iOS AssignmentTests";
 			sourceTree = "<group>";
@@ -321,6 +324,14 @@
 				234BCB712715855D001EF936 /* RestaurantsProviderTests.swift */,
 			);
 			path = Providers;
+			sourceTree = "<group>";
+		};
+		234BCB75271586EC001EF936 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				234BCB7827158716001EF936 /* RestaurantsViewModelTests.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -456,6 +467,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				234BCB6C27157E28001EF936 /* DataDecoderTests.swift in Sources */,
+				234BCB7927158716001EF936 /* RestaurantsViewModelTests.swift in Sources */,
 				234BCB722715855D001EF936 /* RestaurantsProviderTests.swift in Sources */,
 				234BCB6F27157F41001EF936 /* BucketSortTests.swift in Sources */,
 			);
