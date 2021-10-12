@@ -26,4 +26,4 @@ Xcode Version 13.0 (13A233)
 - [x] Building UI.
 - [x] Applying Sorting.
 - [x] Applying Filtering.
-- [ ] Writing unit tests.
+- [x] Writing unit tests.
