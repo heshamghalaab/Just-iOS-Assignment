@@ -34,6 +34,8 @@
 		234BCB6927157DB2001EF936 /* emptyRestaurants.json in Resources */ = {isa = PBXBuildFile; fileRef = 234BCB6827157DB2001EF936 /* emptyRestaurants.json */; };
 		234BCB6C27157E28001EF936 /* DataDecoderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234BCB6B27157E28001EF936 /* DataDecoderTests.swift */; };
 		234BCB6F27157F41001EF936 /* BucketSortTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234BCB6E27157F41001EF936 /* BucketSortTests.swift */; };
+		234BCB722715855D001EF936 /* RestaurantsProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234BCB712715855D001EF936 /* RestaurantsProviderTests.swift */; };
+		234BCB74271585BF001EF936 /* testRestaurants.json in Resources */ = {isa = PBXBuildFile; fileRef = 234BCB73271585BF001EF936 /* testRestaurants.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +79,8 @@
 		234BCB6827157DB2001EF936 /* emptyRestaurants.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = emptyRestaurants.json; sourceTree = "<group>"; };
 		234BCB6B27157E28001EF936 /* DataDecoderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataDecoderTests.swift; sourceTree = "<group>"; };
 		234BCB6E27157F41001EF936 /* BucketSortTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BucketSortTests.swift; sourceTree = "<group>"; };
+		234BCB712715855D001EF936 /* RestaurantsProviderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantsProviderTests.swift; sourceTree = "<group>"; };
+		234BCB73271585BF001EF936 /* testRestaurants.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = testRestaurants.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -281,6 +285,7 @@
 				234BCB6527157D6B001EF936 /* Resources */,
 				234BCB6A27157DD4001EF936 /* DataDecoder */,
 				234BCB6D27157F2C001EF936 /* BucketSort */,
+				234BCB7027158538001EF936 /* Providers */,
 			);
 			path = "Just iOS AssignmentTests";
 			sourceTree = "<group>";
@@ -289,6 +294,7 @@
 			isa = PBXGroup;
 			children = (
 				234BCB6827157DB2001EF936 /* emptyRestaurants.json */,
+				234BCB73271585BF001EF936 /* testRestaurants.json */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -307,6 +313,14 @@
 				234BCB6E27157F41001EF936 /* BucketSortTests.swift */,
 			);
 			path = BucketSort;
+			sourceTree = "<group>";
+		};
+		234BCB7027158538001EF936 /* Providers */ = {
+			isa = PBXGroup;
+			children = (
+				234BCB712715855D001EF936 /* RestaurantsProviderTests.swift */,
+			);
+			path = Providers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -404,6 +418,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				234BCB74271585BF001EF936 /* testRestaurants.json in Resources */,
 				234BCB6927157DB2001EF936 /* emptyRestaurants.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -441,6 +456,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				234BCB6C27157E28001EF936 /* DataDecoderTests.swift in Sources */,
+				234BCB722715855D001EF936 /* RestaurantsProviderTests.swift in Sources */,
 				234BCB6F27157F41001EF936 /* BucketSortTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
