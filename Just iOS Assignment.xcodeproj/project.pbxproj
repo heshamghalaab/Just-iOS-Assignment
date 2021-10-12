@@ -30,6 +30,7 @@
 		234BCB5127156A0A001EF936 /* Bucket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234BCB5027156A0A001EF936 /* Bucket.swift */; };
 		234BCB5327156A1E001EF936 /* InsertionSorter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234BCB5227156A1E001EF936 /* InsertionSorter.swift */; };
 		234BCB5527156A30001EF936 /* StatusDistributor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234BCB5427156A30001EF936 /* StatusDistributor.swift */; };
+		234BCB5727157B91001EF936 /* String+isBackspace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234BCB5627157B91001EF936 /* String+isBackspace.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +59,7 @@
 		234BCB5027156A0A001EF936 /* Bucket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bucket.swift; sourceTree = "<group>"; };
 		234BCB5227156A1E001EF936 /* InsertionSorter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsertionSorter.swift; sourceTree = "<group>"; };
 		234BCB5427156A30001EF936 /* StatusDistributor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusDistributor.swift; sourceTree = "<group>"; };
+		234BCB5627157B91001EF936 /* String+isBackspace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+isBackspace.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +170,7 @@
 			children = (
 				231DC47C2714E01F00AB773C /* OSLog+Loggers.swift */,
 				231DC4922714E8BF00AB773C /* UITableViewCell+identifier.swift */,
+				234BCB5627157B91001EF936 /* String+isBackspace.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -324,6 +327,7 @@
 				231DC4952714EBEB00AB773C /* RestaurantsDataSource.swift in Sources */,
 				231DC4872714E57E00AB773C /* RestaurantsViewController.swift in Sources */,
 				234BCB5127156A0A001EF936 /* Bucket.swift in Sources */,
+				234BCB5727157B91001EF936 /* String+isBackspace.swift in Sources */,
 				231DC49B2715087500AB773C /* BucketSort.swift in Sources */,
 				231DC4892714E58D00AB773C /* RestaurantsViewModel.swift in Sources */,
 				231DC4982714F59900AB773C /* SortingOption.swift in Sources */,

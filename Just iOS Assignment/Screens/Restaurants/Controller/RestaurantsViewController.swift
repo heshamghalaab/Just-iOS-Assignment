@@ -16,7 +16,8 @@ class RestaurantsViewController: UIViewController {
     // MARK: Properties
     
     var viewModel: RestaurantsViewModelProtocol = RestaurantsViewModel()
-    var restaurantsDataSource: RestaurantsDataSource!
+    private var restaurantsDataSource: RestaurantsDataSource!
+    private let searchController = UISearchController(searchResultsController: nil)
     
     // MARK: - View controller lifecycle methods
     
@@ -25,14 +26,26 @@ class RestaurantsViewController: UIViewController {
         super.viewDidLoad()
         bindViewModel()
         restaurantsTableViewConfigurations()
+        searchControllerConfigurations()
         viewModel.inputs.loadRestaurants()
     }
     
+    // Configure restaurants table view
     private func restaurantsTableViewConfigurations(){
         restaurantsDataSource = RestaurantsDataSource(viewModel: self.viewModel)
         restaurantsTableView.dataSource = restaurantsDataSource
         let nib = UINib(nibName: RestaurantTableViewCell.identifier, bundle: nil)
         restaurantsTableView.register(nib, forCellReuseIdentifier: RestaurantTableViewCell.identifier)
+    }
+    
+    // Configure search controller.
+    private func searchControllerConfigurations(){
+        searchController.obscuresBackgroundDuringPresentation = false
+        searchController.searchBar.placeholder = "Search Restaurants"
+        
+        navigationItem.searchController = searchController
+        definesPresentationContext = true
+        searchController.searchBar.delegate = self
     }
     
     private func bindViewModel(){
@@ -41,6 +54,8 @@ class RestaurantsViewController: UIViewController {
             self.restaurantsTableView.reloadData()
         }
     }
+    
+    // MARK: - @IBAction Methods
     
     @IBAction func onTapSelectSortingOption(_ sender: UIBarButtonItem) {
         let alert = UIAlertController(
@@ -55,5 +70,20 @@ class RestaurantsViewController: UIViewController {
         }
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
         self.present(alert, animated: true, completion: nil)
+    }
+}
+
+extension RestaurantsViewController: UISearchBarDelegate {
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        viewModel.inputs.filterContentForSearchText(searchText)
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        viewModel.inputs.filterContentForSearchText("")
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+        viewModel.outputs.searchKeyIsBackSpace = text.isBackspace
+        return true
     }
 }

@@ -17,6 +17,7 @@ protocol RestaurantsViewModelInputs {
 protocol RestaurantsViewModelOutputs {
     var numberOfRestaurants: Int { get }
     var reloadRestaurantsData: ( () -> Void )? { get set }
+    var searchKeyIsBackSpace: Bool { get set }
 }
 
 protocol RestaurantsViewModelProtocol {
@@ -34,20 +35,34 @@ class RestaurantsViewModel: RestaurantsViewModelOutputs, RestaurantsViewModelInp
     
     private let restaurantsProvider: RestaurantsProviding
     private var restaurants: [Restaurant] = []
+    private var allRestaurants: [Restaurant] = []
     private var sortingOption: SortingOption = .newest
     
     init(restaurantsProvider: RestaurantsProviding = RestaurantsProvider()){
         self.restaurantsProvider = restaurantsProvider
     }
     
-    // inputs
+    // MARK: Inputs
+    
     func loadRestaurants() {
         self.restaurants = self.restaurantsProvider.restaurants()
         self.performSorting()
+        self.allRestaurants = self.restaurants
         self.reloadRestaurantsData?()
     }
     
     func filterContentForSearchText(_ searchText: String) {
+        if searchText.isEmpty{
+            self.restaurants = allRestaurants
+            self.performSorting()
+        }else{
+            // check if backspace is clicked or not , because if it is not so we don't need
+            // to filter the whole restaurants we just need to filter the filtered restaurants.
+            self.restaurants = (searchKeyIsBackSpace ? allRestaurants : restaurants).filter({
+                $0.name.lowercased().hasPrefix(searchText.lowercased())
+            })
+            self.reloadRestaurantsData?()
+        }
     }
     
     func restaurantCellViewModel(atIndexPath indexPath: IndexPath) -> RestaurantCellViewModelProtocol{
@@ -71,8 +86,8 @@ class RestaurantsViewModel: RestaurantsViewModelOutputs, RestaurantsViewModelInp
         self.reloadRestaurantsData?()
     }
     
-    // Outputs
+    // MARK: Outputs
     var numberOfRestaurants: Int { restaurants.count }
     var reloadRestaurantsData: ( () -> Void )?
+    var searchKeyIsBackSpace: Bool = false
 }
-
