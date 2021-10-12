@@ -33,6 +33,7 @@
 		234BCB5727157B91001EF936 /* String+isBackspace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234BCB5627157B91001EF936 /* String+isBackspace.swift */; };
 		234BCB6927157DB2001EF936 /* emptyRestaurants.json in Resources */ = {isa = PBXBuildFile; fileRef = 234BCB6827157DB2001EF936 /* emptyRestaurants.json */; };
 		234BCB6C27157E28001EF936 /* DataDecoderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234BCB6B27157E28001EF936 /* DataDecoderTests.swift */; };
+		234BCB6F27157F41001EF936 /* BucketSortTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234BCB6E27157F41001EF936 /* BucketSortTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,7 @@
 		234BCB5C27157D55001EF936 /* Just iOS AssignmentTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Just iOS AssignmentTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		234BCB6827157DB2001EF936 /* emptyRestaurants.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = emptyRestaurants.json; sourceTree = "<group>"; };
 		234BCB6B27157E28001EF936 /* DataDecoderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataDecoderTests.swift; sourceTree = "<group>"; };
+		234BCB6E27157F41001EF936 /* BucketSortTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BucketSortTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -276,8 +278,9 @@
 		234BCB5D27157D55001EF936 /* Just iOS AssignmentTests */ = {
 			isa = PBXGroup;
 			children = (
-				234BCB6A27157DD4001EF936 /* DataDecoder */,
 				234BCB6527157D6B001EF936 /* Resources */,
+				234BCB6A27157DD4001EF936 /* DataDecoder */,
+				234BCB6D27157F2C001EF936 /* BucketSort */,
 			);
 			path = "Just iOS AssignmentTests";
 			sourceTree = "<group>";
@@ -296,6 +299,14 @@
 				234BCB6B27157E28001EF936 /* DataDecoderTests.swift */,
 			);
 			path = DataDecoder;
+			sourceTree = "<group>";
+		};
+		234BCB6D27157F2C001EF936 /* BucketSort */ = {
+			isa = PBXGroup;
+			children = (
+				234BCB6E27157F41001EF936 /* BucketSortTests.swift */,
+			);
+			path = BucketSort;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -430,6 +441,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				234BCB6C27157E28001EF936 /* DataDecoderTests.swift in Sources */,
+				234BCB6F27157F41001EF936 /* BucketSortTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
