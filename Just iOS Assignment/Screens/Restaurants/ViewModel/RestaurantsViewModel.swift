@@ -43,6 +43,7 @@ class RestaurantsViewModel: RestaurantsViewModelOutputs, RestaurantsViewModelInp
     // inputs
     func loadRestaurants() {
         self.restaurants = self.restaurantsProvider.restaurants()
+        self.performSorting()
         self.reloadRestaurantsData?()
     }
     
@@ -55,8 +56,21 @@ class RestaurantsViewModel: RestaurantsViewModelOutputs, RestaurantsViewModelInp
     
     func didSelect(sortingOption: SortingOption){
         self.sortingOption = sortingOption
+        self.performSorting()
     }
-      
+    
+    func performSorting(){
+        let buckets: [Restaurant.Status : Bucket] = [
+            .open: Bucket(), .orderAhead: Bucket(), .closed: Bucket()
+        ]
+
+        self.restaurants = BucketSort().performSorting(
+            restaurants, distributor: StatusDistributor(),
+            sorter: InsertionSorter(sortOption: sortingOption),
+            buckets: buckets)
+        self.reloadRestaurantsData?()
+    }
+    
     // Outputs
     var numberOfRestaurants: Int { restaurants.count }
     var reloadRestaurantsData: ( () -> Void )?
