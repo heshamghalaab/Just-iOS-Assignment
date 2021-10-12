@@ -24,6 +24,6 @@ Xcode Version 13.0 (13A233)
 - [x] Creating App structure.
 - [x] Reading From Json File.
 - [x] Building UI.
-- [ ] Applying Sorting.
+- [x] Applying Sorting.
 - [ ] Applying Filtering.
 - [ ] Writing unit tests.
