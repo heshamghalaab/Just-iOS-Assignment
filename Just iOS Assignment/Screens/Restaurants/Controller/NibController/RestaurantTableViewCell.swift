@@ -25,9 +25,9 @@ class RestaurantTableViewCell: UITableViewCell {
         statusLabel.text = restaurantCellViewModel.status.rawValue
         
         switch restaurantCellViewModel.status{
-        case .open: statusLabel.backgroundColor = UIColor(named: "greenColor")
-        case .orderAhead: statusLabel.backgroundColor = UIColor(named: "blueColor")
-        case .closed: statusLabel.backgroundColor = UIColor(named: "redColor")
+        case .open: statusLabel.backgroundColor = .greenColor
+        case .orderAhead: statusLabel.backgroundColor = .blueColor
+        case .closed: statusLabel.backgroundColor = .redColor
         case .unknown: statusLabel.backgroundColor = .black
         }
     }

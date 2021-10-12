@@ -37,6 +37,7 @@
 		234BCB722715855D001EF936 /* RestaurantsProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234BCB712715855D001EF936 /* RestaurantsProviderTests.swift */; };
 		234BCB74271585BF001EF936 /* testRestaurants.json in Resources */ = {isa = PBXBuildFile; fileRef = 234BCB73271585BF001EF936 /* testRestaurants.json */; };
 		234BCB7927158716001EF936 /* RestaurantsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234BCB7827158716001EF936 /* RestaurantsViewModelTests.swift */; };
+		234BCB7B27158D2A001EF936 /* UIColor+CustomColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234BCB7A27158D2A001EF936 /* UIColor+CustomColors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +84,7 @@
 		234BCB712715855D001EF936 /* RestaurantsProviderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantsProviderTests.swift; sourceTree = "<group>"; };
 		234BCB73271585BF001EF936 /* testRestaurants.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = testRestaurants.json; sourceTree = "<group>"; };
 		234BCB7827158716001EF936 /* RestaurantsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantsViewModelTests.swift; sourceTree = "<group>"; };
+		234BCB7A27158D2A001EF936 /* UIColor+CustomColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+CustomColors.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -203,6 +205,7 @@
 				231DC47C2714E01F00AB773C /* OSLog+Loggers.swift */,
 				231DC4922714E8BF00AB773C /* UITableViewCell+identifier.swift */,
 				234BCB5627157B91001EF936 /* String+isBackspace.swift */,
+				234BCB7A27158D2A001EF936 /* UIColor+CustomColors.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -459,6 +462,7 @@
 				231DC4912714E72800AB773C /* RestaurantCellViewModel.swift in Sources */,
 				231DC45D2714D8BE00AB773C /* SceneDelegate.swift in Sources */,
 				231DC48F2714E5AF00AB773C /* Restaurant.swift in Sources */,
+				234BCB7B27158D2A001EF936 /* UIColor+CustomColors.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
